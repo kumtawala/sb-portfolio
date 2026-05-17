@@ -164,6 +164,15 @@ Found a bug or have an improvement idea? Contributions are welcome!
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
+## Good First PR Checklist
+
+Before opening a pull request:
+
+- [ ] Run the app locally
+- [ ] Keep the change small and focused
+- [ ] Update documentation if behavior changed
+- [ ] Write a clear PR title and description
+
 ---
 
 ## 📄 License
