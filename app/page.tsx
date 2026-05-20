@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const basePath = process.env.NODE_ENV === "production" ? "/gfbs3-portfolio-demo" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/acbhaskar1" : "";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
             href="/" 
             className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
           >
-            GITFOLIO
+            A C Bhaskar Reddy
           </Link>
           <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
             <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
@@ -71,36 +71,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Project 1 */}
             <ProjectCard 
-              title="PROJECT_ONE"
-              description="Your first amazing project goes here. Describe what problem it solves and the tech you used to build it."
-              tags={["REACT", "NEXTJS", "TAILWIND"]}
+              title="Payroll Management System"
+              description="A comprehensive payroll management system built with PHP, Laravel, CodeIgniter and HTML/CSS, JavaScript, MySQL. This project demonstrates my ability to create full-stack applications that handle complex data and business logic for Payslip, Attendance, Onboarding, Reporting."
+              tags={["PHP", "LARAVEL", "CODEIGNITER", "HTML", "CSS", "JAVASCRIPT", "MYSQL"]}
               color="cyan"
-              href="#"
+              href="https://www.stohrm.com/stohrmwebapp/index.php?q=login&m=index&client=jpmorgan&admin=1"
             />
             {/* Project 2 */}
             <ProjectCard 
-              title="PROJECT_TWO"
-              description="Your second project showcase. Tell visitors what makes this project special and what you learned building it."
-              tags={["JAVASCRIPT", "API", "CSS"]}
+              title="FlixMedia - A SaaS product for branding and marketing media content"
+              description="FlixMedia is a SaaS product that provides a comprehensive solution for branding and marketing media content. It offers a range of features including media management, content scheduling, analytics, and collaboration tools. This project showcases my skills in building scalable web applications with a focus on user experience and performance."
+              tags={["PHP", "LARAVEL", "CODEIGNITER", "HTML", "CSS", "JAVASCRIPT", "MYSQL","React", "Next.js", "Node.js"]}
               color="fuchsia"
-              href="#"
-            />
-            {/* Project 3 */}
-            <ProjectCard 
-              title="PROJECT_THREE"
-              description="Another project to highlight your skills. Share the impact or results of this work."
-              tags={["TYPESCRIPT", "NODE", "EXPRESS"]}
-              color="purple"
-              href="#"
-            />
-            {/* Project 4 */}
-            <ProjectCard 
-              title="PROJECT_FOUR"
-              description="Keep building and adding to your portfolio. Each project tells part of your developer story."
-              tags={["PYTHON", "DJANGO", "POSTGRESQL"]}
-              color="yellow"
-              href="#"
-            />
+              href="https://flixmedia.com"
+            />            
           </div>
         </section>
 
@@ -127,7 +111,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-8 space-y-8 text-cyan-100/80 leading-relaxed font-light">
             <p>
-              Every developer has a unique journey. Share yours here—whether you&apos;re self-taught, a bootcamp grad, or transitioning careers. <strong className="text-fuchsia-400 font-bold">Your story matters.</strong> Talk about what drives you to code and the impact you want to make.
+              Senior Software Developer with Total 7+ years of development & technical skill trainer experience, self-taught bootcamp graduate with lots of other latest tech skills, and experienced professional transitioning careers. <strong className="text-fuchsia-400 font-bold">Worked on various projects involving PHP, Laravel, CodeIgniter, and modern JavaScript frameworks.</strong> With greater then 5 diffrent projects experience, I have a proven track record of delivering high-quality software solutions that meet client needs and exceed expectations. I am passionate about learning new technologies and continuously improving my skills to stay at the forefront of the industry.
             </p>
             <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500" />
@@ -135,8 +119,9 @@ export default function Home() {
                 <div>
                   <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">STACK_TRACE</h3>
                   <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> JavaScript / Python / TypeScript</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> JavaScript / Python / TypeScript / Go</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Next.js / Node.js</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> PHP / Laravel / CodeIgniter / HTML / CSS/ MySQL</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Git / GitHub / VS Code</li>
                   </ul>
                 </div>
@@ -170,9 +155,9 @@ export default function Home() {
                 FORK ON GITHUB
               </a>
               <div className="flex items-center gap-8 pt-4">
-                <SocialLink href="https://github.com" label="GITHUB" />
-                <SocialLink href="https://linkedin.com" label="LINKEDIN" />
-                <SocialLink href="https://twitter.com" label="TWITTER" />
+                <SocialLink href="https://github.com/acbhaskar1" label="GITHUB" />
+                <SocialLink href="https://linkedin.com/in/acbhaskar1" label="LINKEDIN" />
+                <SocialLink href="https://x.com/acbhaskar1" label="TWITTER" />
               </div>
             </div>
           </div>
