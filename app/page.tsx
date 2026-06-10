@@ -5,258 +5,642 @@ const basePath = process.env.NODE_ENV === "production" ? "/gfbs3-portfolio-demo"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050510] text-cyan-50 font-mono selection:bg-fuchsia-500/30 selection:text-fuchsia-200 overflow-x-hidden">
-      {/* Grid Background */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a2e_1px,transparent_1px),linear-gradient(to_bottom,#1a1a2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-        <div className="absolute bottom-0 left-0 right-0 h-[50vh] bg-gradient-to-t from-fuchsia-900/20 to-transparent opacity-30" />
-      </div>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050510]/80 backdrop-blur-md border-b border-cyan-900/30">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
-          >
-            GITFOLIO
-          </Link>
-          <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
-            <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
-            <Link href="#philosophy" className="hover:text-fuchsia-400 hover:drop-shadow-[0_0_5px_rgba(232,121,249,0.8)] transition-all">ABOUT</Link>
-            <Link href="#contact" className="hover:text-yellow-400 hover:drop-shadow-[0_0_5px_rgba(250,204,21,0.8)] transition-all">CONTACT</Link>
-          </div>
-        </div>
-      </nav>
+<title>Le Trésor Perdu des Vaudois</title>
 
-      <main className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20">
-        {/* Hero Section */}
-        <section className="py-20 md:py-32 space-y-8 relative">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 text-xs font-bold tracking-widest uppercase animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,1)]" />
-              READY TO LAUNCH
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
-              BUILD YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 animate-gradient-x">DEVELOPER PORTFOLIO</span> <br />
-              IN MINUTES
-            </h1>
-          </div>
-          <p className="text-lg md:text-xl text-cyan-100/70 max-w-2xl leading-relaxed font-light border-l-2 border-fuchsia-500/50 pl-6">
-            A beginner-friendly portfolio template that showcases your projects beautifully. Fork it, customize it, deploy it—no design skills required.
-          </p>
-          <div className="pt-8 flex gap-6">
-            <Link 
-              href="#work" 
-              className="group relative px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                GET STARTED <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
-            </Link>
-          </div>
-        </section>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        {/* Selected Work */}
-        <section id="work" className="py-20 space-y-12">
-          <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
-            <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
-              // YOUR_PROJECTS
-            </h2>
-            <span className="text-xs font-mono text-cyan-700">Showcase what you&apos;ve built with style</span>
-          </div>
+<style>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
-            <ProjectCard 
-              title="PROJECT_ONE"
-              description="Your first amazing project goes here. Describe what problem it solves and the tech you used to build it."
-              tags={["REACT", "NEXTJS", "TAILWIND"]}
-              color="cyan"
-              href="#"
-            />
-            {/* Project 2 */}
-            <ProjectCard 
-              title="PROJECT_TWO"
-              description="Your second project showcase. Tell visitors what makes this project special and what you learned building it."
-              tags={["JAVASCRIPT", "API", "CSS"]}
-              color="fuchsia"
-              href="#"
-            />
-            {/* Project 3 */}
-            <ProjectCard 
-              title="PROJECT_THREE"
-              description="Another project to highlight your skills. Share the impact or results of this work."
-              tags={["TYPESCRIPT", "NODE", "EXPRESS"]}
-              color="purple"
-              href="#"
-            />
-            {/* Project 4 */}
-            <ProjectCard 
-              title="PROJECT_FOUR"
-              description="Keep building and adding to your portfolio. Each project tells part of your developer story."
-              tags={["PYTHON", "DJANGO", "POSTGRESQL"]}
-              color="yellow"
-              href="#"
-            />
-          </div>
-        </section>
+:root{
+    --gold:#d4af37;
+    --gold-light:#f4d03f;
+    --dark:#091018;
+    --dark-2:#111c27;
+    --text:#e8edf2;
+}
 
-        {/* Philosophy / Approach */}
-        <section id="philosophy" className="py-20 grid md:grid-cols-12 gap-12 border-t border-cyan-900/30">
-          <div className="md:col-span-4 space-y-8">
-            <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
-              {"// ABOUT_ME"}
-            </h2>
-            
-            {/* Profile Image - Replace src with your image in /public */}
-            <div className="relative w-full aspect-[4/5] border border-cyan-500/30 rounded-sm overflow-hidden bg-cyan-950/30 group">
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(5,5,16,0.8)_100%)] z-10" />
-              {/* Scanline effect */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
-              
-              <Image 
-                src={`${basePath}/me.png`}
-                alt="Profile"
-                fill
-                className="object-cover z-0 opacity-60 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-8 space-y-8 text-cyan-100/80 leading-relaxed font-light">
-            <p>
-              Every developer has a unique journey. Share yours here—whether you&apos;re self-taught, a bootcamp grad, or transitioning careers. <strong className="text-fuchsia-400 font-bold">Your story matters.</strong> Talk about what drives you to code and the impact you want to make.
-            </p>
-            <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500" />
-              <div className="grid grid-cols-2 gap-8 font-mono text-sm">
-                <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">STACK_TRACE</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> JavaScript / Python / TypeScript</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Next.js / Node.js</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Git / GitHub / VS Code</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">PROTOCOLS</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Always learning</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Ship &gt; Perfect</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Open source contributor</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        {/* Contact */}
-        <section id="contact" className="py-20 border-t border-cyan-900/30">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
-              READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">LAUNCH?</span>
-            </h2>
-            <p className="text-cyan-200/60 text-lg">
-              Fork this template on GitHub and make it yours. Update the content, add your projects, and deploy to GitHub Pages in under 30 minutes.
-            </p>
-            <div className="flex flex-col items-center gap-6">
-              <a 
-                href="https://github.com/ladykerr/gfbs3-portfolio-demo" 
-                className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300 clip-path-polygon"
-              >
-                FORK ON GITHUB
-              </a>
-              <div className="flex items-center gap-8 pt-4">
-                <SocialLink href="https://github.com" label="GITHUB" />
-                <SocialLink href="https://linkedin.com" label="LINKEDIN" />
-                <SocialLink href="https://twitter.com" label="TWITTER" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+html{
+    scroll-behavior:smooth;
+}
 
-      <footer className="py-8 text-center text-xs font-mono text-cyan-900/50 border-t border-cyan-900/20">
-        <p>Made with ❤️ by <a href="https://gh.io/gfb" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub for Beginners</a> and <a href="https://gh.io/gfb-copilot" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub Copilot</a></p>
-      </footer>
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--dark);
+    color:var(--text);
+    overflow-x:hidden;
+    line-height:1.8;
+}
+
+/* =======================
+   HERO
+======================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.75)
+    ),
+    url("images/montagnes-vaudoises.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:clamp(3rem,8vw,7rem);
+    color:var(--gold);
+    text-shadow:0 0 25px rgba(212,175,55,.3);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    max-width:750px;
+    margin:auto;
+}
+
+.scroll-indicator{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:0.9rem;
+    opacity:.85;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,20%,50%,80%,100%{
+        transform:translate(-50%,0);
+    }
+    40%{
+        transform:translate(-50%,-12px);
+    }
+    60%{
+        transform:translate(-50%,-6px);
+    }
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(9,16,24,.9);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    list-style:none;
+    padding:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* =======================
+   SECTIONS
+======================= */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-family:'Cinzel',serif;
+    font-size:3rem;
+    color:var(--gold);
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.section-subtitle{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    opacity:.85;
+    margin-bottom:60px;
+}
+
+/* =======================
+   CONTENT GRID
+======================= */
+
+.content-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+.content-grid img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+}
+
+.content-grid p{
+    margin-bottom:20px;
+}
+
+/* =======================
+   TIMELINE
+======================= */
+
+.timeline-section{
+    background:
+    radial-gradient(circle at top,
+    #172433 0%,
+    #091018 70%);
+}
+
+.timeline{
+    max-width:1100px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    width:4px;
+    height:100%;
+    background:var(--gold);
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:25px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:20px;
+    padding:30px;
+    transition:.4s;
+}
+
+.timeline-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+}
+
+.timeline-card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+/* =======================
+   QUOTE BOX
+======================= */
+
+.quote-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:60px;
+    border-radius:30px;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(212,175,55,.12),
+        rgba(255,255,255,.04)
+    );
+    border:1px solid rgba(212,175,55,.25);
+}
+
+.quote-box .icon{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.quote-box p{
+    font-size:1.2rem;
+    font-style:italic;
+}
+
+/* =======================
+   GALLERY
+======================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    max-width:1300px;
+    margin:auto;
+}
+
+.photo{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.photo img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.8s;
+}
+
+.photo:hover img{
+    transform:scale(1.08);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:flex-end;
+    padding:25px;
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.85)
+    );
+}
+
+.overlay h3{
+    color:white;
+}
+
+/* =======================
+   TREASURE BOX
+======================= */
+
+.treasure-box{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+    padding:60px;
+    border-radius:30px;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(212,175,55,.12),
+        rgba(255,255,255,.04)
+    );
+    border:1px solid rgba(212,175,55,.3);
+}
+
+.treasure-box .icon{
+    font-size:5rem;
+    margin-bottom:20px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer{
+    padding:50px;
+    text-align:center;
+    background:#05080c;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media(max-width:900px){
+
+    .content-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd){
+        width:100%;
+        left:0;
+        padding-left:60px;
+    }
+
+    .section-title{
+        font-size:2.2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-content">
+        <h1>Le Trésor Perdu des Vaudois</h1>
+
+        <p>
+            Une légende mystérieuse au cœur des Alpes,
+            entre histoire, persécutions religieuses
+            et trésor disparu.
+        </p>
     </div>
+
+    <div class="scroll-indicator">
+        ▼ Découvrir l'histoire
+    </div>
+
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#histoire">Histoire</a></li>
+        <li><a href="#legende">Légende</a></li>
+        <li><a href="#indices">Indices</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#recherches">Recherches</a></li>
+    </ul>
+</nav>
+
+<section id="histoire">
+
+    <h2 class="section-title">Les Vaudois : un peuple de résistance</h2>
+
+    <p class="section-subtitle">
+        Les Vaudois sont un mouvement chrétien apparu au XIIe siècle autour de
+        Pierre Valdo. Considérés comme hérétiques par les autorités religieuses
+        de leur époque, ils furent persécutés durant plusieurs siècles.
+    </p>
+
+    <div class="content-grid">
+
+        <div>
+            <p>
+                Beaucoup trouvèrent refuge dans les vallées alpines du Piémont,
+                où ils développèrent une culture de résistance, de solidarité
+                et de discrétion.
+            </p>
+
+            <p>
+                Malgré les persécutions, les communautés vaudoises ont préservé
+                leur identité religieuse et culturelle à travers les générations.
+            </p>
+
+            <p>
+                Leur histoire demeure aujourd'hui un symbole de liberté de
+                conscience et de persévérance.
+            </p>
+        </div>
+
+        <img src="images/vallees-vaudoises.jpg"
+             alt="Vallées vaudoises">
+
+    </div>
+
+</section>
+
+<section id="legende">
+
+    <h2 class="section-title">La légende du trésor disparu</h2>
+
+    <div class="content-grid">
+
+        <div>
+            <p>
+                Selon la tradition orale, à l'époque des persécutions,
+                certaines familles vaudoises auraient caché des objets
+                précieux, des manuscrits, des pièces d'or et des reliques
+                dans des grottes secrètes des Alpes.
+            </p>
+
+            <p>
+                Craignant les pillages et les confiscations, elles auraient
+                dissimulé leurs biens dans des caches connues seulement de
+                quelques initiés.
+            </p>
+
+            <p>
+                Beaucoup de ces emplacements auraient été perdus avec le temps,
+                alimentant l'une des plus fascinantes légendes alpines.
+            </p>
+        </div>
+
+        <img src="images/grotte-secrete.jpg"
+             alt="Grotte secrète">
+
+    </div>
+
+</section>
+
+<section id="indices" class="timeline-section">
+
+    <h2 class="section-title">Les indices de la légende</h2>
+
+    <p class="section-subtitle">
+        Au fil des siècles, récits, témoignages et traditions orales ont
+        nourri l'histoire du trésor perdu.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>📜 Manuscrits disparus</h3>
+                <p>
+                    Des documents anciens évoquent des biens précieux cachés
+                    durant les périodes de persécution.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>⛰ Refuges alpins</h3>
+                <p>
+                    Les vallées isolées et les grottes naturelles auraient
+                    servi de caches secrètes.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>🧭 Une carte mystérieuse</h3>
+                <p>
+                    Certains récits parlent d'une carte transmise de génération
+                    en génération.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-card">
+                <h3>💰 Un trésor introuvable</h3>
+                <p>
+                    Malgré les recherches, aucun dépôt n'a jamais été identifié
+                    avec certitude.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="quote-box">
+
+        <div class="icon">📜</div>
+
+        <h2 class="section-title">
+            Une tradition transmise par les générations
+        </h2>
+
+        <p>
+            « Certains racontent qu'une carte aurait existé,
+            transmise de génération en génération,
+            indiquant l'emplacement du trésor.
+            Mais personne n'a jamais pu en prouver l'existence. »
+        </p>
+
+    </div>
+
+</section>
+
+<section id="galerie">
+
+    <h2 class="section-title">Galerie photographique</h2>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="images/vallee-alpine.jpg" alt="">
+            <div class="overlay">
+                <h3>Les vallées vaudoises</h3>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="images/chapelle-vaudoise.jpg" alt="">
+            <div class="overlay">
+                <h3>Patrimoine religieux</h3>
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="images/coffre-tresor.jpg" alt="">
+            <div class="overlay">
+                <h3>Le trésor légendaire</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="recherches">
+
+    <div class="treasure-box">
+
+        <div class="icon">🔎</div>
+
+        <h2 class="section-title">
+            Les recherches modernes
+        </h2>
+
+        <p>
+            Au fil des décennies, plusieurs expéditions ont exploré les
+            montagnes et les cavités naturelles associées à la légende.
+        </p>
+
+        <br>
+
+        <p>
+            Malgré les nombreuses hypothèses, aucune découverte majeure n'a
+            permis de confirmer l'existence du trésor.
+        </p>
+
+        <br>
+
+        <p>
+            Aujourd'hui encore, le mystère continue de fasciner historiens,
+            passionnés d'histoire alpine et amateurs de légendes.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 — Le Trésor Perdu des Vaudois
+    </p>
+
+    <p style="opacity:.7;margin-top:10px;">
+        Entre histoire, mémoire et légende alpine.
+    </p>
+
+</footer>
+
+</body>
   );
-}
-
-function ProjectCard({ title, description, tags, color, href }: { title: string, description: string, tags: string[], color: "cyan" | "fuchsia" | "purple" | "yellow", href: string }) {
-  // Valid color options for the card styling
-  const validColors = ["cyan", "fuchsia", "purple", "yellow"] as const;
-  
-  // Runtime validation: default to "cyan" if an invalid color is provided
-  const safeColor = validColors.includes(color) ? color : "cyan";
-
-  const colorClasses = {
-    cyan: "group-hover:border-cyan-500/50 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]",
-    fuchsia: "group-hover:border-fuchsia-500/50 group-hover:shadow-[0_0_20px_rgba(232,121,249,0.2)]",
-    purple: "group-hover:border-purple-500/50 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]",
-    yellow: "group-hover:border-yellow-500/50 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.2)]",
-  };
-
-  const textColors = {
-    cyan: "group-hover:text-cyan-400",
-    fuchsia: "group-hover:text-fuchsia-400",
-    purple: "group-hover:text-purple-400",
-    yellow: "group-hover:text-yellow-400",
-  };
-
-  return (
-    <Link href={href} className={`group block space-y-4 p-6 bg-[#0a0a1a] border border-cyan-900/30 transition-all duration-300 ${colorClasses[safeColor]}`}>
-      <div className="flex justify-between items-start">
-        <h3 className={`text-xl font-bold text-white tracking-wider transition-colors ${textColors[safeColor]}`}>
-          {title}
-        </h3>
-        <ArrowUpRightIcon className={`w-5 h-5 text-cyan-700 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 ${textColors[safeColor]}`} />
-      </div>
-      <p className="text-sm text-cyan-100/60 leading-relaxed font-light border-l border-cyan-900/50 pl-4">
-        {description}
-      </p>
-      <div className="flex gap-2 pt-2">
-        {tags.map(tag => (
-          <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-cyan-700 bg-cyan-950/30 px-2 py-1 border border-cyan-900/30 group-hover:border-cyan-500/30 group-hover:text-cyan-300 transition-colors">
-            {tag}
-          </span>
-        ))}
-      </div>
-    </Link>
-  );
-}
-
-function SocialLink({ href, label }: { href: string, label: string }) {
-  return (
-    <a 
-      href={href} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="text-xs font-bold tracking-widest text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all"
-    >
-      {label}
-    </a>
-  );
-}
-
-// Simple Icons
-function ArrowRightIcon({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-    </svg>
-  )
-}
-
-function ArrowUpRightIcon({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d="M7 17L17 7" />
-      <path d="M7 7h10v10" />
-    </svg>
-  )
 }
