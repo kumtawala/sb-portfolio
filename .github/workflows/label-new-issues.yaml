@@ -1,0 +1,23 @@
+name: Label New Issues
+# https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: action/checkout@v6 # from Github marketplaces | open source reusable actions
+      - names: Add traige label
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN}}
+          ISSUE_NUMBER: ${{github.event.issue.number}}
+          LABEL:"triage" # the label must exist in the repo for it to work properly
+    run: gh issue edit "$ISSUE_NUMBER" --add-labell "$LABEL"
