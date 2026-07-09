@@ -165,6 +165,9 @@ Found a bug or have an improvement idea? Contributions are welcome!
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
+## First Contribution to Ideas
+1. Suggest a clear and brief understanding for beginners.
+---
 
 ## 📄 License
 
