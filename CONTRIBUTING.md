@@ -35,6 +35,15 @@ The following is a set of guidelines for contributing to this project. These are
     ```
 4.  Commit your changes with a descriptive message.
 
+## Other Ways To Contribute
+
+You can contribute without writing much code:
+
+- Report confusing setup steps
+- Improve wording in the README
+- Suggest beginner-friendly examples
+- Test the site and share feedback
+
 ## 🎨 Style Guidelines
 
 *   **Aesthetic:** Maintain the "Retro-Futuristic" / Cyberpunk 1985 vibe.
