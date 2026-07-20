@@ -15,9 +15,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: action/checkout@v6 # from Github marketplaces | open source reusable actions
-      - names: Add traige label
+      - name: Add triage label
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN}}
-          ISSUE_NUMBER: ${{github.event.issue.number}}
-          LABEL:"triage" # the label must exist in the repo for it to work properly
-    run: gh issue edit "$ISSUE_NUMBER" --add-labell "$LABEL"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number}}
+          LABEL: "triage" # the label must exist in the repo for it to work properly
+        run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL" 
+    
