@@ -20,5 +20,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number}}
           LABEL: "triage" # the label must exist in the repo for it to work properly
-        run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL" 
-    
+        run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL"
+      
