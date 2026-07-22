@@ -164,7 +164,12 @@ Found a bug or have an improvement idea? Contributions are welcome!
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
----
+### 🛠️ Contribution Checklist
+- [ ] **Code Changes**: Implemented new logic / fixed an existing bug.
+- [ ] **Documentation**: Updated the README or inline comments to reflect changes.
+- [ ] **Testing**: Added or updated unit tests to verify the fix.
+- [ ] **Formatting**: Verified code follows the project's style guidelines.
+
 
 ## 📄 License
 
