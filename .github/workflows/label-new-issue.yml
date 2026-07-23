@@ -6,7 +6,7 @@ on:
     
 jobs:
   label-issues:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       issues: write
       contents: read
