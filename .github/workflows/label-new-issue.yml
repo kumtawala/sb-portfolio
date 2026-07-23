@@ -19,5 +19,5 @@ jobs:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             ISSUE_NUMBER: ${{ github.event.issue.number }}
             LABEL: "triage"
-        run: gh issue edit "$ISSUE_NUMBER" --add-label "$LABEL"
+        run: gh issue edit "$ISSUE_NUMBER" --add-label "Triage"
                                                       
